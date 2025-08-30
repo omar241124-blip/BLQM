@@ -1,0 +1,16 @@
+import time
+import telebot
+
+# --- Telegram setup ---
+BOT_TOKEN = "8242720791:AAGnYu4Sp1hQCJPIBcr1bGWJTcnk7KJX6loN"
+CHAT_ID = "1144838994"
+bot = telebot.TeleBot(BOT_TOKEN)
+
+while True:
+    try:
+        bot.send_message(CHAT_ID, "Hi")
+        print("✅ Sent 'Hi' to Telegram")
+    except Exception as e:
+        print(f"❌ Error sending message: {e}")
+    
+    time.sleep(60)  # wait 60 seconds before sending again
